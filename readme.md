@@ -158,7 +158,31 @@ echo 'export PATH="/usr/local/zig:$PATH"' >> /etc/profile
 zig version
 ```
 
-### 8. create directory structure
+### 8. install grainzsh
+
+grainzsh provides a minimal, intentional zsh configuration for the grain
+network. see https://github.com/teamprecision06/grainzsh for details.
+
+```bash
+# as root, install zsh
+apk add zsh
+
+# as xy user, clone grainzsh
+cd ~/github
+git clone https://github.com/teamprecision06/grainzsh.git teamprecision06/grainzsh
+
+# create symlink to grainzsh config
+ln -sf ~/github/teamprecision06/grainzsh/template/.zshrc ~/.zshrc
+
+# set zsh as default shell for xy user
+chsh -s /usr/bin/zsh
+```
+
+note: you'll need to log out and back in (or start a new terminal) for
+the shell change to take effect. after that, you'll see the λ prompt
+and grainzsh configuration will be active.
+
+### 9. create directory structure
 
 ```bash
 # as xy user
