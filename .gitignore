@@ -1,0 +1,11 @@
+# QEMU disk images
+*.qcow2
+*.qcow
+*.img
+
+# ISO files
+*.iso
+
+# VM directories (if you keep them in the repo)
+VMs/
+
